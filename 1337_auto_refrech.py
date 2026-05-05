@@ -1,7 +1,8 @@
 import time
 
 import pyautogui
-from pynput import keyboard
+from pynput import keyboard 
+import random 
 
 running = True
 
@@ -20,4 +21,4 @@ while running:
     pyautogui.press("f5")
     time.sleep(1)
     pyautogui.press("down", 30)
-    time.sleep(5)
+    time.sleep(random.randint(5, 7))
