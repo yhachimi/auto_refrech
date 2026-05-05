@@ -1,8 +1,10 @@
-import pyautogui
 import time
+
+import pyautogui
 from pynput import keyboard
 
 running = True
+
 
 def on_press(key):
     global running
@@ -10,10 +12,12 @@ def on_press(key):
         running = False
         return False
 
+
 listener = keyboard.Listener(on_press=on_press)
 listener.start()
 
 while running:
     pyautogui.press("f5")
-    pyautogui.press("down",30)
-    time.sleep(6)
+    time.sleep(1)
+    pyautogui.press("down", 30)
+    time.sleep(5)
